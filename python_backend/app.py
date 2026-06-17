@@ -7,12 +7,17 @@ from config import Config
 
 app = FastAPI()
 
+import os
+
+frontend_url = os.environ.get("FRONTEND_URL", "https://sethath-care.vercel.app/")
+
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://medicareplusss.vercel.app",
-        "http://localhost:5173"
+        "https://sethath-care.vercel.app/",
+        "http://localhost:5173",
+        frontend_url
     ],
     allow_credentials=True,
     allow_methods=["*"],
