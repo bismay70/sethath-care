@@ -4,7 +4,7 @@
 
 # 🏥 Healthcare Management Platform
 
-![SehathCare Screenshot Placeholder](ss.png)
+![SehathCare Screenshot Placeholder](/ss.png)
 
 A modern, full-stack healthcare management system designed to streamline hospital operations, enhance doctor and patient experiences, and leverage AI for smarter healthcare. Built with React, Node.js, Python, MongoDB, and Docker.
 
