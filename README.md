@@ -1,53 +1,26 @@
 
 
-# MEDICARE+
+# SehathCare
 
 # 🏥 Healthcare Management Platform
+
+![SehathCare Screenshot Placeholder](placeholder_screenshot.png)
 
 A modern, full-stack healthcare management system designed to streamline hospital operations, enhance doctor and patient experiences, and leverage AI for smarter healthcare. Built with React, Node.js, Python, MongoDB, and Docker.
 
 
 
-## 🚀 Features
+## 🌟 Core Features
 
-- **👩‍⚕️ Doctor Portal:**
+> **SehathCare** provides an end-to-end hospital management experience powered by cutting-edge AI and seamless microservices.
 
-  - View and manage appointments
-  - Access and update patient records
-  - Generate smart prescriptions with real-time suggestions (MCP Server)
-  - Voice-enabled registration and prescription
-
-- **🧑‍💼 Admin Dashboard:**
-
-  - Manage doctors, patients, and departments
-  - View analytics and hospital statistics
-  - Approve appointments and monitor activity
-
-- **👨‍💻 Frontdesk:**
-
-  - Register new patients
-  - Schedule appointments
-
-- **🤖 AI & NLP Integration:**
-
-  - Medical knowledge graph and ontology
-  - Prescription validation and smart suggestions
-  - Entity and relation extraction from medical text
-
-- **🔊 Voice Registration:**
-
-  - Voice-based patient registration and prescription input
-
-- **📦 Microservices Architecture:**
-
-  - React frontend
-  - Node.js backend (API, authentication, business logic)
-  - Python backend (AI/NLP, knowledge graph)
-  - MCP Server (real-time doctor assistance)
-  - MongoDB database
-
-- **🐳 Dockerized Deployment:**
-  - Easy setup and scaling with Docker Compose
+- 👩‍⚕️ **Smart Doctor Portal:** Real-time AI prescription suggestions (via MCP Server), voice-enabled registration, and appointment management.
+- 🧑‍💼 **Comprehensive Admin Dashboard:** Bird's-eye view analytics, hospital statistics, and staff/patient management.
+- 👨‍💻 **Efficient Frontdesk:** Streamlined patient registration and rapid appointment scheduling.
+- 🤖 **Advanced AI & NLP Integration:** Custom medical knowledge graph, prescription validation, and entity/relation extraction from medical text.
+- 🔊 **Voice Integration:** Voice-based patient registration and intelligent prescription input.
+- 📦 **Microservices Architecture:** Decoupled React frontend, Node.js API, Python AI/NLP backend, and MCP Server.
+- 🐳 **Dockerized Deployment:** Seamless setup and scaling with Docker Compose.
 
 ---
 
@@ -63,13 +36,15 @@ Healthcare/
 
 ---
 
-## ⚙️ Tech Stack
+## 💻 Tech Stack Highlights
 
-- **Frontend:** React, Tailwind CSS, Framer Motion, CountUp.js
-- **Backend:** Node.js, Express, Socket.IO (MCP Server)
-- **AI/NLP:** Python, FastAPI/Flask, NLTK, custom knowledge graph
-- **Database:** MongoDB
-- **DevOps:** Docker, Docker Compose, Nginx
+| Domain | Technologies Used |
+| :--- | :--- |
+| **Frontend** | ⚛️ React, 🎨 Tailwind CSS, 🎞️ Framer Motion, 🔢 CountUp.js |
+| **Backend** | 🟢 Node.js, 🚂 Express, 🔌 Socket.IO (MCP Server) |
+| **AI / NLP** | 🐍 Python, ⚡ FastAPI/Flask, 🧠 NLTK, Custom Knowledge Graph |
+| **Database** | 🍃 MongoDB |
+| **DevOps** | 🐳 Docker, 🐙 Docker Compose, 🌐 Nginx |
 
 ---
 
@@ -104,7 +79,17 @@ docker-compose up --build
 
 ---
 
-## 🧩 Services Overview
+## 🧩 System Architecture & Services Overview
+
+```mermaid
+graph TD;
+    Client[🖥️ React Frontend] -->|REST API| Server[🗄️ Node.js Backend];
+    Client -->|WebSocket| MCP[⚡ MCP Server];
+    Client -->|AI / NLP Calls| Python[🧠 Python Backend];
+    Server -->|CRUD Operations| DB[(🍃 MongoDB)];
+    Python -->|Data Processing| DB;
+    MCP -->|Real-time AI| Server;
+```
 
 ### 🖥️ **Frontend (client/)**
 
