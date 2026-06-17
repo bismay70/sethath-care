@@ -676,15 +676,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Chayan Mondal",
+                name: "Mohit Naik",
                 text: "The voice registration system made my visit so much easier. I was quickly matched with the right specialist for my condition.",
               },
               {
-                name: "Piyushkanta Panda",
+                name: "Bismay Samal",
                 text: "I was impressed by how accurately the system understood my symptoms. The doctor was prepared with all my information before I arrived.",
               },
               {
-                name: "Kunal Kushwaha ",
+                name: "Amiya Behera",
                 text: "As someone with mobility issues, being able to register by voice and get a prescription quickly was a game-changer for me.",
               },
             ].map((testimonial, index) => (
