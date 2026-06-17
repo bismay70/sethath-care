@@ -4,7 +4,7 @@
 
 # 🏥 Healthcare Management Platform
 
-![SehathCare Screenshot Placeholder](placeholder_screenshot.png)
+![SehathCare Screenshot Placeholder](ss.png)
 
 A modern, full-stack healthcare management system designed to streamline hospital operations, enhance doctor and patient experiences, and leverage AI for smarter healthcare. Built with React, Node.js, Python, MongoDB, and Docker.
 
@@ -178,16 +178,3 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 [MIT](LICENSE)
 
 ---
-
-## 🙏 Acknowledgements
-
-- [React](https://react.dev/)
-- [Node.js](https://nodejs.org/)
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Docker](https://www.docker.com/)
-- [Socket.IO](https://socket.io/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-
->>>>>>> 0d58466a0de4bbad748e9e5d5ecb039558f31e8c

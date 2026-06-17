@@ -47,7 +47,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent transition-transform duration-200 hover:rotate-[3deg]">
-              MediCare+
+              SehathCare
             </span>
           </Link>
 

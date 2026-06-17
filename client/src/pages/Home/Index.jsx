@@ -112,8 +112,21 @@ export default function Home() {
         id="home"
         className="min-h-screen flex items-center hero-pattern overflow-hidden pt-20 pb-16 lg:pt-24 lg:pb-20 relative"
       >
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/sehathcare.mp4" type="video/mp4" />
+        </video>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none"></div>
+
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
           <motion.div
             className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-400/30 to-cyan-400/30 rounded-full blur-3xl"
             animate={{
@@ -433,7 +446,7 @@ export default function Home() {
               Our Features
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose MediCare+
+              Why Choose SehathCare
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our hospital management system offers cutting-edge features
@@ -744,7 +757,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At <span className="text-blue-600 font-semibold">MediCare+</span>,
+            At <span className="text-blue-600 font-semibold">SehathCare</span>,
             we are committed to delivering exceptional healthcare services
             powered by cutting-edge technology and a compassionate approach. Our
             mission is to make quality healthcare accessible and seamless for
@@ -781,7 +794,7 @@ export default function Home() {
                 <rect width="20" height="16" x="2" y="4" rx="2" />
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
-              <span className="text-gray-700">contact@medicare-plus.com</span>
+              <span className="text-gray-700">contact@sehathcare.com</span>
             </div>
           </div>
         </div>
@@ -793,7 +806,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                MediCare+
+                SehathCare
               </h3>
               <p className="text-gray-400 mb-6">
                 Advanced healthcare with voice-enabled patient registration and
@@ -946,7 +959,7 @@ export default function Home() {
                     />
                   </svg>
                   <span className="text-gray-400">
-                    contact@medicare-plus.com
+                    contact@sehathcare.com
                   </span>
                 </li>
               </ul>
@@ -955,7 +968,7 @@ export default function Home() {
 
           <div className="border-t border-gray-800 pt-8">
             <p className="text-center text-gray-400">
-              © {new Date().getFullYear()} MediCare+. All rights reserved.
+              © {new Date().getFullYear()} SehathCare. All rights reserved.
             </p>
           </div>
         </div>

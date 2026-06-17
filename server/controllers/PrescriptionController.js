@@ -17,19 +17,22 @@ const initTwilioClient = () => {
   const accountSid = process.env.TWILIO_ACCOUNT_SID;
   const authToken = process.env.TWILIO_AUTH_TOKEN;
   const twilioPhone = process.env.TWILIO_PHONE_NUMBER;
+  const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 
   // Debugging output
   console.log('TWILIO_ACCOUNT_SID:', accountSid);
   console.log('TWILIO_AUTH_TOKEN:', authToken ? '[HIDDEN]' : undefined);
   console.log('TWILIO_PHONE_NUMBER:', twilioPhone);
+  console.log('TWILIO_MESSAGING_SERVICE_SID:', messagingServiceSid);
 
-  if (!accountSid || !authToken || !twilioPhone) {
+  if (!accountSid || !authToken || (!twilioPhone && !messagingServiceSid)) {
     throw new ApiError(500, "Twilio credentials not properly configured");
   }
 
   return {
     client: twilio(accountSid, authToken),
-    phoneNumber: twilioPhone
+    phoneNumber: twilioPhone,
+    messagingServiceSid: messagingServiceSid
   };
 };
 
@@ -243,7 +246,7 @@ export const sendPrescriptionSMS = async (req, res) => {
     }
 
     // Initialize Twilio client
-    const { client, phoneNumber } = initTwilioClient();
+    const { client, phoneNumber, messagingServiceSid } = initTwilioClient();
 
     // Generate PDF
     const tempDir = path.join(__dirname, "../temp");
@@ -318,12 +321,19 @@ export const sendPrescriptionSMS = async (req, res) => {
 
     // Send MMS with PDF link as mediaUrl
     const smsBody = `Hello ${prescription.patient.name}, your prescription PDF is attached.`;
-    const twilioRes = await client.messages.create({
+    const messagePayload = {
       body: smsBody,
-      from: phoneNumber,
       to: toPhone,
       mediaUrl: [publicUrl]
-    });
+    };
+
+    if (messagingServiceSid) {
+      messagePayload.messagingServiceSid = messagingServiceSid;
+    } else {
+      messagePayload.from = phoneNumber;
+    }
+
+    const twilioRes = await client.messages.create(messagePayload);
 
     // Cleanup PDF file
     fs.unlink(pdfPath, (err) => {
