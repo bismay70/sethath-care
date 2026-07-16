@@ -44,11 +44,11 @@ export const deregisterDoctor = async (req, res) => {
 
 export const getAllDoctors = async (req, res) => {
   try {
-    const doctors = await Doctor.find();
+    const doctors = await Doctor.find({});
     return res.status(200).json({ doctors });
   } catch (error) {
-    console.error(error);
-    throw new ApiError(500, "Failed to fetch doctors");
+    console.error("Error in getAllDoctors:", error);
+    return res.status(500).json({ message: "Failed to fetch doctors", error: error.message });
   }
 };
 

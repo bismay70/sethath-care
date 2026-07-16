@@ -1,12 +1,15 @@
 
 
-# SehathCare
-
-# 🏥 Healthcare Management Platform
-
-![SehathCare Screenshot Placeholder](client/public/ss.png)
+# 🏥 SehathCare
 
 A modern, full-stack healthcare management system designed to streamline hospital operations, enhance doctor and patient experiences, and leverage AI for smarter healthcare. Built with React, Node.js, Python, MongoDB, and Docker.
+
+### 📸 Screenshots
+
+| | |
+|:---:|:---:|
+| ![Screenshot 1](client/public/ss1.png) | ![Screenshot 2](client/public/ss2.png) |
+| ![Screenshot 3](client/public/ss3.png) | ![Screenshot 4](client/public/ss4.png) |
 
 
 
@@ -53,8 +56,8 @@ Healthcare/
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/Healthcare.git
-cd Healthcare
+git clone https://github.com/bismay70/sehath-care.git
+cd sehath-care
 ```
 
 ### 2. **Environment Variables**
@@ -162,11 +165,6 @@ graph TD;
 
 ## 📚 Documentation
 
+- Over **30 RESTful API endpoints** powering the core functionality (authentication, dashboard, patient/doctor management, appointments, and prescriptions).
 - API docs available at `/docs` (for Python backend if using FastAPI)
 - See each service's README for more details
-
-
-
-[MIT](LICENSE)
-
----
